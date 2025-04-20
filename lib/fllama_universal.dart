@@ -1,7 +1,11 @@
+import 'dart:ffi';
+
+import 'package:ffi/ffi.dart';
 import 'package:fllama/fllama.dart';
 import 'package:fllama/misc/gbnf.dart';
 import 'package:jinja/jinja.dart';
 
+import 'fllama_io.dart';
 import 'model/model_override.dart';
 
 /// Returns true if the given [output] indicates that the model failed to load.
@@ -350,4 +354,24 @@ String fllamaSanitizeChatTemplate(
     chatTemplate = chatMlTemplate;
   }
   return chatTemplate;
+}
+
+/// Clears the model cache used by fllama.
+///
+/// This function releases memory used by cached models.
+/// Call this when you want to free up memory or when switching between models.
+///
+/// @param forceClean If true, forces clearing of the model cache even when in use
+void fllamaClearModelCache({bool forceClean = false}) async {
+  // Allocate memory for the boolean parameter
+  final Pointer<Bool> forceCleanPointer = calloc<Bool>();
+  // Set the value
+  forceCleanPointer.value = forceClean ? true : false;
+
+  try {
+    fllamaBindings.fllama_clear_model_cache(forceCleanPointer);
+  } finally {
+    // Free the allocated memory
+    calloc.free(forceCleanPointer);
+  }
 }
