@@ -299,3 +299,23 @@ void _fllamaInferenceIsolate(SendPort sendPort) async {
   // Send the port to the main isolate on which we can receive requests.
   sendPort.send(helperReceivePort.sendPort);
 }
+
+/// Clears the model cache used by fllama.
+///
+/// This function releases memory used by cached models.
+/// Call this when you want to free up memory or when switching between models.
+///
+/// @param forceClean If true, forces clearing of the model cache even when in use
+void fllamaClearModelCache({bool forceClean = false}) async {
+  // Allocate memory for the boolean parameter
+  final Pointer<Bool> forceCleanPointer = calloc<Bool>();
+  // Set the value
+  forceCleanPointer.value = forceClean ? true : false;
+
+  try {
+    fllamaBindings.fllama_clear_model_cache(forceCleanPointer);
+  } finally {
+    // Free the allocated memory
+    calloc.free(forceCleanPointer);
+  }
+}

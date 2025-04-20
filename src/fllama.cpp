@@ -425,7 +425,16 @@ static json to_json_oaicompat_chat(
 }
 
 extern "C" {
-
+EMSCRIPTEN_KEEPALIVE FFI_PLUGIN_EXPORT void
+fllama_clear_model_cache(bool force_clear) {
+  try {
+    global_inference_queue.clear_model_cache(force_clear);
+  } catch (const std::exception &e) {
+    std::cerr << "Error clearing model cache: " << e.what() << std::endl;
+  } catch (...) {
+    std::cerr << "Unknown error clearing model cache" << std::endl;
+  }
+}
 EMSCRIPTEN_KEEPALIVE void fllama_inference(fllama_inference_request request,
                                            fllama_inference_callback callback) {
   std::cout << "[fllama] Hello from fllama.cpp! Queueing your request."

@@ -263,3 +263,31 @@ void InferenceQueue::process_inference() {
     cleanup_cond_var.notify_one();
   }
 }
+
+void InferenceQueue::clear_model_cache(bool force_clear) {
+  std::lock_guard<std::mutex> lock(models_lock);
+
+  std::vector<std::string> models_to_free;
+
+  for (const auto& pair : cached_models) {
+    const std::string& path = pair.first;
+    const auto& resources = pair.second;
+
+    // Only free inactive models unless force_clear is true
+    if (resources->active_users == 0 || force_clear) {
+      models_to_free.push_back(path);
+    } else {
+      std::cout << "[InferenceQueue] Model " << path
+                << " is still in use by " << resources->active_users
+                << " processes - not clearing" << std::endl;
+    }
+  }
+
+  // Free resources for selected models
+  for (const auto& path : models_to_free) {
+    free_model_resources(path);
+  }
+
+  std::cout << "[InferenceQueue] Cleared " << models_to_free.size()
+            << " models from cache" << std::endl;
+}
