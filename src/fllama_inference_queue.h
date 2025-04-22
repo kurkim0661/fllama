@@ -57,7 +57,7 @@ struct TaskWrapper {
 class InferenceQueue {
 public:
   // Time in seconds after which an inactive model should be freed
-  static const int MODEL_INACTIVITY_TIMEOUT_SEC = 15;
+  static const int MODEL_INACTIVITY_TIMEOUT_SEC = 120;
   
   InferenceQueue();
   ~InferenceQueue();
