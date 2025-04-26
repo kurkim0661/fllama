@@ -57,7 +57,7 @@ struct TaskWrapper {
 class InferenceQueue {
 public:
   // Time in seconds after which an inactive model should be freed
-  static const int MODEL_INACTIVITY_TIMEOUT_SEC = 15;
+  static const int MODEL_INACTIVITY_TIMEOUT_SEC = 120;
   
   InferenceQueue();
   ~InferenceQueue();
@@ -76,6 +76,7 @@ public:
   void increment_model_users(const std::string& model_path);
   void decrement_model_users(const std::string& model_path);
   void check_inactive_models();
+  void clear_model_cache(bool force_clear = false);
 
 private:
   std::thread worker;               // Worker thread to process tasks

@@ -133,6 +133,17 @@ class FllamaBindings {
           'fllama_tokenize');
   late final _fllama_tokenize =
       _fllama_tokenizePtr.asFunction<int Function(fllama_tokenize_request)>();
+
+  void fllama_clear_model_cache(
+      ffi.Pointer<ffi.Bool> force_clear
+  ) {
+    return _fllama_clear_model_cache(force_clear);
+  }
+
+  late final _fllama_clear_model_cachePtr =
+  _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Bool>)>>('fllama_clear_model_cache');
+  late final _fllama_clear_model_cache =
+  _fllama_clear_model_cachePtr.asFunction<void Function(ffi.Pointer<ffi.Bool>)>();
 }
 
 final class fllama_inference_request extends ffi.Struct {
