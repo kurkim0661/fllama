@@ -375,3 +375,17 @@ void fllamaClearModelCache({bool forceClean = false}) async {
     calloc.free(forceCleanPointer);
   }
 }
+
+Future<void> fllamaClearModelCacheAsync({bool forceClean = false}) async {
+  // Allocate memory for the boolean parameter
+  final Pointer<Bool> forceCleanPointer = calloc<Bool>();
+  // Set the value
+  forceCleanPointer.value = forceClean ? true : false;
+
+  try {
+    fllamaBindings.fllama_clear_model_cache(forceCleanPointer);
+  } finally {
+    // Free the allocated memory
+    calloc.free(forceCleanPointer);
+  }
+}
