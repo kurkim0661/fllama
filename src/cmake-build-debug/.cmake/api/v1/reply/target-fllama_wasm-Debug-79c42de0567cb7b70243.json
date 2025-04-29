@@ -1,0 +1,333 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "fllama_wasm"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"ggml_add_backend_library",
+			"ggml_add_cpu_backend_variant_impl"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"llama.cpp/src/CMakeLists.txt",
+			"llama.cpp/ggml/src/CMakeLists.txt",
+			"llama.cpp/ggml/src/ggml-cpu/CMakeLists.txt",
+			"llama.cpp/ggml/src/ggml-blas/CMakeLists.txt",
+			"llama.cpp/ggml/src/ggml-metal/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 63,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 64,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 39,
+				"parent" : 4
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 302,
+				"parent" : 6
+			},
+			{
+				"command" : 2,
+				"file" : 3,
+				"line" : 8,
+				"parent" : 7
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 229,
+				"parent" : 8
+			},
+			{
+				"file" : 4
+			},
+			{
+				"command" : 2,
+				"file" : 4,
+				"line" : 14,
+				"parent" : 10
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 229,
+				"parent" : 11
+			},
+			{
+				"file" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 5,
+				"line" : 7,
+				"parent" : 13
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 229,
+				"parent" : 14
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 214,
+				"parent" : 6
+			},
+			{
+				"command" : 1,
+				"file" : 2,
+				"line" : 327,
+				"parent" : 6
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.4.sdk -mmacosx-version-min=15.3 -fcolor-diagnostics"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "DART_SHARED_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "GGML_USE_BLAS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "GGML_USE_CPU"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "GGML_USE_METAL"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/Users/jihwankim/IdeaProjects/fllama/src/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/jihwankim/IdeaProjects/fllama/src/llama.cpp/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/jihwankim/IdeaProjects/fllama/src/llama.cpp/ggml/src/../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/Users/jihwankim/IdeaProjects/fllama/src/llama.cpp/common/."
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "fllama::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-base::@94de48a0d5830e0c5d2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml::@94de48a0d5830e0c5d2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-cpu::@94de48a0d5830e0c5d2f"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-blas::@0661be416f8a4e075ce7"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "ggml-metal::@3855110f9ca262eeee43"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "llama::@fb8c1886b26de7beabc1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "build_info::@2c2f5d13aecf752ca753"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "common::@2c2f5d13aecf752ca753"
+		}
+	],
+	"id" : "fllama_wasm::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/Users/jihwankim/IdeaProjects/fllama/src/cmake-build-debug",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libfllama.dylib",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "llama.cpp/common/libcommon.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "llama.cpp/src/libllama.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "llama.cpp/ggml/src/libggml.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "llama.cpp/ggml/src/libggml-cpu.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "llama.cpp/ggml/src/ggml-blas/libggml-blas.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework Accelerate",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 15,
+				"fragment" : "llama.cpp/ggml/src/ggml-metal/libggml-metal.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 16,
+				"fragment" : "llama.cpp/ggml/src/libggml-base.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 17,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework Foundation",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework Metal",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-framework MetalKit",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "fllama_wasm",
+	"nameOnDisk" : "fllama_wasm",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "fllama_wasm_entry.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

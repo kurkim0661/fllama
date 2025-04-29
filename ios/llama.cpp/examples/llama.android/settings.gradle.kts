@@ -1,3 +1,5 @@
+package ios.llama.cpp.examples.llama.android
+
 pluginManagement {
     repositories {
         google()

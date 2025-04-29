@@ -1,3 +1,5 @@
+package src.llama.cpp.examples.llama.android.llama
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -18,6 +20,7 @@ android {
         }
         externalNativeBuild {
             cmake {
+                arguments += "-DLLAMA_CURL=OFF"
                 arguments += "-DLLAMA_BUILD_COMMON=ON"
                 arguments += "-DGGML_LLAMAFILE=OFF"
                 arguments += "-DCMAKE_BUILD_TYPE=Release"
