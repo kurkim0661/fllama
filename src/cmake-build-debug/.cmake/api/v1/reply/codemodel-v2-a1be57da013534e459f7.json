@@ -1,0 +1,306 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						8
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "llama.cpp",
+					"childIndexes" : 
+					[
+						2,
+						7
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-llama.cpp-Debug-55def2b4ec0c11fdc65c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "llama.cpp"
+				},
+				{
+					"build" : "llama.cpp/ggml",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-llama.cpp.ggml-Debug-88f0aebbe40153042532.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "llama.cpp/ggml"
+				},
+				{
+					"build" : "llama.cpp/ggml/src",
+					"childIndexes" : 
+					[
+						4,
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-llama.cpp.ggml.src-Debug-b954e8d20cd8c60a8cac.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 2,
+					"source" : "llama.cpp/ggml/src",
+					"targetIndexes" : 
+					[
+						4,
+						5,
+						7
+					]
+				},
+				{
+					"build" : "llama.cpp/ggml/src/ggml-cpu",
+					"jsonFile" : "directory-llama.cpp.ggml.src.ggml-cpu-Debug-e18c490a9dab25dd23b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "llama.cpp/ggml/src/ggml-cpu"
+				},
+				{
+					"build" : "llama.cpp/ggml/src/ggml-blas",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-llama.cpp.ggml.src.ggml-blas-Debug-ba89701144537551cf85.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "llama.cpp/ggml/src/ggml-blas",
+					"targetIndexes" : 
+					[
+						6
+					]
+				},
+				{
+					"build" : "llama.cpp/ggml/src/ggml-metal",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-llama.cpp.ggml.src.ggml-metal-Debug-6f6aa49a17ef1161c8b8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 2,
+					"source" : "llama.cpp/ggml/src/ggml-metal",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "llama.cpp/src",
+					"jsonFile" : "directory-llama.cpp.src-Debug-d52620c92b489b2e7310.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.14"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "llama.cpp/src",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "llama.cpp/common",
+					"jsonFile" : "directory-llama.cpp.common-Debug-50eceb2b1daa8e02649f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "llama.cpp/common",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						8
+					],
+					"name" : "fllama_library",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				},
+				{
+					"childIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						7
+					],
+					"name" : "llama.cpp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"name" : "ggml",
+					"parentIndex" : 1,
+					"targetIndexes" : 
+					[
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 8,
+					"id" : "build_info::@2c2f5d13aecf752ca753",
+					"jsonFile" : "target-build_info-Debug-3a3c29b61b8a16163874.json",
+					"name" : "build_info",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "common::@2c2f5d13aecf752ca753",
+					"jsonFile" : "target-common-Debug-fc2aa459ac795eb1d2a8.json",
+					"name" : "common",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fllama::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fllama-Debug-1fd38f3c15714159924d.json",
+					"name" : "fllama",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fllama_wasm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fllama_wasm-Debug-79c42de0567cb7b70243.json",
+					"name" : "fllama_wasm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ggml::@94de48a0d5830e0c5d2f",
+					"jsonFile" : "target-ggml-Debug-52e7c2867dc09e363edb.json",
+					"name" : "ggml",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ggml-base::@94de48a0d5830e0c5d2f",
+					"jsonFile" : "target-ggml-base-Debug-678d5da361a9f709b1a9.json",
+					"name" : "ggml-base",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "ggml-blas::@0661be416f8a4e075ce7",
+					"jsonFile" : "target-ggml-blas-Debug-395d15e1f740d2334968.json",
+					"name" : "ggml-blas",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ggml-cpu::@94de48a0d5830e0c5d2f",
+					"jsonFile" : "target-ggml-cpu-Debug-77c37bdba3e9a31b37f8.json",
+					"name" : "ggml-cpu",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "ggml-metal::@3855110f9ca262eeee43",
+					"jsonFile" : "target-ggml-metal-Debug-a347fcdb7ccf9d2866af.json",
+					"name" : "ggml-metal",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "llama::@fb8c1886b26de7beabc1",
+					"jsonFile" : "target-llama-Debug-bc82a7c0b4563f2e0699.json",
+					"name" : "llama",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/jihwankim/IdeaProjects/fllama/src/cmake-build-debug",
+		"source" : "/Users/jihwankim/IdeaProjects/fllama/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

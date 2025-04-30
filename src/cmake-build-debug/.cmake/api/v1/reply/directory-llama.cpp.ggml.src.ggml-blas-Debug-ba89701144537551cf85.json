@@ -1,0 +1,53 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install",
+			"ggml_add_backend_library"
+		],
+		"files" : 
+		[
+			"llama.cpp/ggml/src/CMakeLists.txt",
+			"llama.cpp/ggml/src/ggml-blas/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 14,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 230,
+				"parent" : 1
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"llama.cpp/ggml/src/ggml-blas/libggml-blas.a"
+			],
+			"targetId" : "ggml-blas::@0661be416f8a4e075ce7",
+			"targetIndex" : 6,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "llama.cpp/ggml/src/ggml-blas",
+		"source" : "llama.cpp/ggml/src/ggml-blas"
+	}
+}
